@@ -92,6 +92,20 @@ public class ShapeCollectorTestSuite {
             assertEquals(shape, result);
         }
 
+        @DisplayName("When trying to get figure with negative index '-1'," +
+                "then figure retrieved should be null value")
+        @Test
+        void testGetFigureWithNegativeIndex() {
+            //Given
+            ShapeCollector collector = new ShapeCollector();
+
+            //When
+            Shape result = collector.getFigure(-1);
+
+            //Then
+            assertNull(result);
+        }
+
         @DisplayName("When collector is empty and trying to get all figures, " +
                 "then should retrieve null")
         @Test
@@ -188,6 +202,24 @@ public class ShapeCollectorTestSuite {
 
             //Then
             assertEquals(shape, result);
+        }
+
+        @DisplayName("When trying to get figure with index bigger (3) than index of last element (1) of collection," +
+                "then figure retrieved should be null value")
+        @Test
+        void testGetFigureWithNegativeIndex() {
+            //Given
+            ShapeCollector collector = new ShapeCollector();
+            Shape e1 = new Triangle(2.0, 1.0);
+            Shape e2 = new Square(2.0);
+            collector.addFigure(e1);
+            collector.addFigure(e2);
+
+            //When
+            Shape result = collector.getFigure(3);
+
+            //Then
+            assertNull(result);
         }
 
         @DisplayName("When collector has 2 elements and trying to get all figures, " +

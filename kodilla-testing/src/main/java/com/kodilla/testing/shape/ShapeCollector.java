@@ -21,6 +21,9 @@ public class ShapeCollector {
     }
 
     public Shape getFigure(int n) {
+        if (n < 0 || n >= shapes.size()) {
+            return null;
+        }
         return shapes.get(n);
     }
 
