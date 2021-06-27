@@ -52,7 +52,7 @@ class WeatherForecastTestSuite {
         double averageTemp = weatherForecast.calculateAverageTemperature();
 
         //Then
-        Assertions.assertEquals(25.56, averageTemp);
+        Assertions.assertEquals(25.56, averageTemp, 0.0);
     }
 
     @Test
@@ -65,6 +65,6 @@ class WeatherForecastTestSuite {
         double medianTemp = weatherForecast.calculateMedianOfTemperatures();
 
         //Then
-        Assertions.assertEquals(25.5, medianTemp);
+        Assertions.assertEquals(25.5, medianTemp, 0.0);
     }
 }
