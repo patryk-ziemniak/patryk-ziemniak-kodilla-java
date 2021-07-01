@@ -139,7 +139,6 @@ public class StatisticsCalculatorTestSuite {
 
             //When
             calculator.calculateAdvStatistics(statistics);
-            calculator.showStatistics();
 
             //Then
             assertEquals(0, calculator.averagePostsPerUser, 0);
