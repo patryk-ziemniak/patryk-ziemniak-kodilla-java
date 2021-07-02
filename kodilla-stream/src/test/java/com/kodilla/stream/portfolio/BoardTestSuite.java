@@ -156,7 +156,8 @@ class BoardTestSuite {
         double result = project.getTaskLists().stream()
                 .filter(inProgressList::equals)
                 .flatMap(taskList -> taskList.getTasks().stream())
-                .collect(Collectors.averagingInt(task -> task.getCreated().until(LocalDate.now()).getDays()));
+                .mapToInt(task -> task.getCreated().until(LocalDate.now()).getDays())
+                .average().orElse(0.0);
 
         //Then
         assertEquals(10.0, result, 0.0);
