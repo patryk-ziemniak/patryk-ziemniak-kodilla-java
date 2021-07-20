@@ -2,10 +2,11 @@ package com.kodilla.good.patterns.challenges.food2door;
 
 public class ExtraFoodShopOrderProcess implements DeliveryOrderProcess {
 
+    private static final String SUPPLIER_NAME = "ExtraFoodShop";
+
     @Override
     public boolean process(DeliveryOrder deliveryOrder) {
-        System.out.println("Ordering delivery of '" + deliveryOrder.getProduct() +
-                "' amount: " + deliveryOrder.getAmount() + ", from ExtraFoodShop.");
+        order(deliveryOrder, SUPPLIER_NAME);
         return true;
     }
 }
