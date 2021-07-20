@@ -1,14 +1,14 @@
 package com.kodilla.good.patterns.challenges.food2door.order;
 
-import com.kodilla.good.patterns.challenges.food2door.supplier.DeliveryOrderProcess;
+import com.kodilla.good.patterns.challenges.food2door.supplier.Supplier;
 
 public class DeliveryOrder {
 
-    private String product;
-    private double amount;
-    private DeliveryOrderProcess supplier;
+    private final String product;
+    private final double amount;
+    private final Supplier supplier;
 
-    public DeliveryOrder(String product, double amount, DeliveryOrderProcess supplier) {
+    public DeliveryOrder(String product, double amount, Supplier supplier) {
         this.product = product;
         this.amount = amount;
         this.supplier = supplier;
@@ -22,7 +22,16 @@ public class DeliveryOrder {
         return amount;
     }
 
-    public DeliveryOrderProcess getSupplier() {
+    public Supplier getSupplier() {
         return supplier;
+    }
+
+    @Override
+    public String toString() {
+        return "DeliveryOrder{" +
+                "product='" + product + '\'' +
+                ", amount=" + amount +
+                ", supplier=" + supplier +
+                '}';
     }
 }

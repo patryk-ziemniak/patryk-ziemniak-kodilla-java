@@ -3,15 +3,20 @@ package com.kodilla.good.patterns.challenges.food2door;
 import com.kodilla.good.patterns.challenges.food2door.order.DeliveryOrder;
 import com.kodilla.good.patterns.challenges.food2door.order.DeliveryOrderRetriever;
 import com.kodilla.good.patterns.challenges.food2door.supplier.DeliveryOrderProcess;
+import com.kodilla.good.patterns.challenges.food2door.supplier.SupplierFactory;
 
 import java.util.List;
 
 public class DeliveryOrderProcessor {
 
     public void process(DeliveryOrder deliveryOrder) {
-        DeliveryOrderProcess deliveryOrderProcess = deliveryOrder.getSupplier();
-        boolean isOrdered = deliveryOrderProcess.process(deliveryOrder);
-        checkIfOrdered(isOrdered);
+        DeliveryOrderProcess deliveryOrderProcess = SupplierFactory.transform(deliveryOrder.getSupplier());
+        if (deliveryOrderProcess != null) {
+            boolean isOrdered = deliveryOrderProcess.process(deliveryOrder);
+            checkIfOrdered(isOrdered);
+        } else {
+            System.out.println("Supplier entered in delivery order is not recognized!");
+        }
     }
 
     private void checkIfOrdered(boolean isOrdered) {
