@@ -23,13 +23,9 @@ public class FlightSearcher {
 
     public static Set<Flight> searchConnectingFlightFromTo(Set<Flight> flightSet, Airport departure, Airport arrival) {
         Set<Flight> result = new HashSet<>();
+        Set<Flight> flightsTo = searchFlightsTo(flightSet, arrival);
 
-        Set<Flight> flightsTo = flightSet.stream()
-                .filter(flight -> flight.getArrival().equals(arrival))
-                .collect(Collectors.toSet());
-
-        flightSet.stream()
-                .filter(flight -> flight.getDeparture().equals(departure))
+        searchFlightsFrom(flightSet, departure).stream()
                 .filter(flight -> flightsTo.contains(new Flight(flight.getArrival(), arrival)))
                 .forEach(result::add);
 
