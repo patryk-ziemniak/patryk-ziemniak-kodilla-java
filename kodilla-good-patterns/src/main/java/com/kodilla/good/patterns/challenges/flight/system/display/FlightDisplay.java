@@ -7,7 +7,11 @@ import java.util.Set;
 public class FlightDisplay {
 
     public static void display(Set<Flight> flightSet) {
-        flightSet.forEach(System.out::println);
+        if(flightSet.isEmpty()) {
+            System.out.println("No flights found...");
+        } else {
+            flightSet.forEach(System.out::println);
+        }
         System.out.println();
     }
 }
