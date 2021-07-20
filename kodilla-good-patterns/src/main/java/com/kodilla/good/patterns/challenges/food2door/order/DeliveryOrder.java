@@ -1,4 +1,6 @@
-package com.kodilla.good.patterns.challenges.food2door;
+package com.kodilla.good.patterns.challenges.food2door.order;
+
+import com.kodilla.good.patterns.challenges.food2door.supplier.DeliveryOrderProcess;
 
 public class DeliveryOrder {
 

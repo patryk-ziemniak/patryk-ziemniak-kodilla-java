@@ -1,5 +1,9 @@
 package com.kodilla.good.patterns.challenges.food2door;
 
+import com.kodilla.good.patterns.challenges.food2door.order.DeliveryOrder;
+import com.kodilla.good.patterns.challenges.food2door.order.DeliveryOrderRetriever;
+import com.kodilla.good.patterns.challenges.food2door.supplier.DeliveryOrderProcess;
+
 import java.util.List;
 
 public class DeliveryOrderProcessor {

@@ -1,4 +1,8 @@
-package com.kodilla.good.patterns.challenges.food2door;
+package com.kodilla.good.patterns.challenges.food2door.order;
+
+import com.kodilla.good.patterns.challenges.food2door.supplier.ExtraFoodShopOrderProcess;
+import com.kodilla.good.patterns.challenges.food2door.supplier.GlutenFreeShopOrderProcess;
+import com.kodilla.good.patterns.challenges.food2door.supplier.HealthyShopOrderProcess;
 
 import java.util.ArrayList;
 import java.util.List;
