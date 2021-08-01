@@ -22,14 +22,14 @@ public class Board {
 
     public String toString() {
         String result = "";
-        for (int n = MIN_INDEX; n <= MAX_INDEX; n++) {
+        for (int y = MIN_INDEX; y <= MAX_INDEX; y++) {
             result += "|";
-            for (int k = MIN_INDEX; k <= MAX_INDEX; k++) {
-                if (board[n][k] == null) {
+            for (int x = MIN_INDEX; x <= MAX_INDEX; x++) {
+                if (board[x][y] == null) {
                     result += "  ";
                 } else {
-                    result += (board[n][k]).getColor().equals(Figure.BLACK) ? "b" : "w";
-                    result += (board[n][k]) instanceof Pawn ? "P" : "Q";
+                    result += (board[x][y]).getColor().equals(Figure.BLACK) ? "b" : "w";
+                    result += (board[x][y]) instanceof Pawn ? "P" : "Q";
                 }
                 result += "|";
             }
