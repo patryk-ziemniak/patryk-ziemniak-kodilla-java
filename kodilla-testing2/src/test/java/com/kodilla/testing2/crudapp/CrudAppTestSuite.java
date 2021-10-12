@@ -85,14 +85,14 @@ public class CrudAppTestSuite {
         WebDriver driverTrello = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driverTrello.get(TRELLO_URL);
 
-        driverTrello.findElement(By.id("user")).sendKeys("ziemniak.pat@gmail.com");
-        driverTrello.findElement(By.id("password")).sendKeys("j@r@nfk8RCQb7xTWGk*DX3sn");
+        driverTrello.findElement(By.id("user")).sendKeys("LOGIN");
+        driverTrello.findElement(By.id("password")).sendKeys("PASSWORD");
         WebElement el = driverTrello.findElement(By.id("login"));
         el.submit();
 
         Thread.sleep(4000);
 
-        driverTrello.findElement(By.id("password")).sendKeys("j@r@nfk8RCQb7xTWGk*DX3sn");
+        driverTrello.findElement(By.id("password")).sendKeys("PASSWORD");
         driverTrello.findElement(By.id("login-submit")).submit();
 
         Thread.sleep(4000);
