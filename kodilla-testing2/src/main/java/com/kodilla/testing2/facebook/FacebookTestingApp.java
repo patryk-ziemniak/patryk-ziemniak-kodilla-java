@@ -10,9 +10,9 @@ public class FacebookTestingApp {
     public static final String XPATH_COOKIE_BUTTON = "//button[@data-cookiebanner=\"accept_button\"]";
     public static final String XPATH_REGISTRATION_BUTTON = "//a[@data-testid=\"open-registration-form-button\"]";
     public static final String XPATH_DIV_BIRTH = "//div[@class=\"mbs _52lq fsl fwb fcb\"]";
-    public static final String XPATH_SELECT_BIRTH_DAY = "//select[@class=\"_9407 _5dba _9hk6 _8esg\"]";
-    public static final String XPATH_SELECT_BIRTH_MONTH = "//select[@class=\"_9407 _5dba _9hk6 _8esg\"]";
-    public static final String XPATH_SELECT_BIRTH_YEAR = "//select[@class=\"_9407 _5dba _9hk6 _8esg\"]";
+    public static final String XPATH_SELECT_BIRTH_DAY = "//select[@name=\"birthday_day\"]";
+    public static final String XPATH_SELECT_BIRTH_MONTH = "//select[@name=\"birthday_month\"]";
+    public static final String XPATH_SELECT_BIRTH_YEAR = "//select[@name=\"birthday_year\"]";
 
     public static void main(String[] args) {
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
